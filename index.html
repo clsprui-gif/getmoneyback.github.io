@@ -1,31 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub page as PWA template</title>
-  <link rel="canonical" href="https://codepo8.github.io/github-page-pwa/" />
-  <link rel="manifest" href="/github-page-pwa/manifest.webmanifest">
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Money Back — Free Deals & Bonuses</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: #f7f7f5; color: #1a1a1a; }
+
+  header {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 48px 20px 36px;
+  }
+  header h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 10px; }
+  header p { font-size: 16px; color: #aaa; max-width: 480px; margin: 0 auto; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+
+  .category { margin-bottom: 40px; }
+  .category h2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #ebebeb;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+  .card-icon { font-size: 28px; margin-bottom: 10px; }
+  .card-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .card-bonus { font-size: 13px; font-weight: 500; color: #16a34a; margin-bottom: 8px; }
+  .card-desc { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 16px; }
+
+  .card a {
+    display: block;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 0;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+  .card a:hover { background: #333; }
+
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 13px;
+    color: #aaa;
+    border-top: 1px solid #e5e5e0;
+  }
+</style>
 </head>
 <body>
- 
-  <h1>GitHub page as PWA template</h1>
-  <p>
-    This is a PWA template for GitHub pages. 
-    Make sure to check the README at 
-    <a href="https://github.com/codepo8/github-page-pwa/">https://github.com/codepo8/github-page-pwa/</a> and 
-    to change the necessary settings to your needs.
-  </p>
 
-  <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/github-page-pwa/sw.js',
-          {scope: '/github-page-pwa/'}
-        )
-      }
-  </script>
-  <script src="js/app.js"></script>
+<header>
+  <h1>💰 Get Money Back</h1>
+  <p>Real deals, real bonuses. Sign up through these links and get paid just for trying something new.</p>
+</header>
+
+<div class="container">
+
+  <div class="category">
+    <h2>🍔 Food & Delivery</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">🍔</div>
+        <div class="card-name">Uber Eats</div>
+        <div class="card-bonus">$10 off first order</div>
+        <div class="card-desc">Free delivery + discount on your first order. New users only.</div>
+        <a href="PASTE_YOUR_UBEREATS_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚗</div>
+        <div class="card-name">DoorDash</div>
+        <div class="card-bonus">$15 off first order</div>
+        <div class="card-desc">Get $15 off plus free delivery on your first DoorDash order.</div>
+        <a href="PASTE_YOUR_DOORDASH_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <div class="card-name">Instacart</div>
+        <div class="card-bonus">Free delivery</div>
+        <div class="card-desc">Free delivery on your first 3 grocery orders.</div>
+        <a href="PASTE_YOUR_INSTACART_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>💸 Finance & Free Money</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">💸</div>
+        <div class="card-name">Cash App</div>
+        <div class="card-bonus">$5 free cash</div>
+        <div class="card-desc">Send $5, get $5 free instantly when you sign up.</div>
+        <a href="PASTE_YOUR_CASHAPP_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <div class="card-name">Robinhood</div>
+        <div class="card-bonus">Free stock</div>
+        <div class="card-desc">Get a free stock worth up to $200 just for signing up.</div>
+        <a href="PASTE_YOUR_ROBINHOOD_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🪙</div>
+        <div class="card-name">Coinbase</div>
+        <div class="card-bonus">$10 in Bitcoin</div>
+        <div class="card-desc">Buy $100 in crypto and get $10 in Bitcoin free.</div>
+        <a href="PASTE_YOUR_COINBASE_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>🛍️ Shopping & Cash Back</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">💰</div>
+        <div class="card-name">Rakuten</div>
+        <div class="card-bonus">$30 welcome bonus</div>
+        <div class="card-desc">Get $30 cash back when you spend $30 at any store.</div>
+        <a href="PASTE_YOUR_RAKUTEN_LINK_HERE" target="_blank">Grab deal →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <div class="card-name">Amazon</div>
+        <div class="card-bonus">Deals on everything</div>
+        <div class="card-desc">Shop millions of items. Best prices guaranteed.</div>
+        <a href="PASTE_YOUR_AMAZON_LINK_HERE" target="_blank">Shop now →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🍯</div>
+        <div class="card-name">Honey</div>
+        <div class="card-bonus">Auto saves money</div>
+        <div class="card-desc">Free browser extension that finds coupons automatically.</div>
+        <a href="PASTE_YOUR_HONEY_LINK_HERE" target="_blank">Get it free →</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GetMoneyBack · All deals are real. All bonuses go to you.
+</footer>
+
 </body>
 </html>
