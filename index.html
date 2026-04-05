@@ -25,7 +25,6 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); }
 
-  /* HEADER */
   header {
     border-bottom: 3px solid var(--yellow);
     padding: 0 24px;
@@ -38,233 +37,112 @@
     background: var(--black);
     z-index: 100;
   }
-  .logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 2px;
-    color: var(--yellow);
-  }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--yellow); }
   .logo span { color: var(--white); }
   nav { font-family: 'Space Mono', monospace; font-size: 11px; color: #888; }
 
-  /* HERO */
-  .hero {
-    padding: 80px 24px 60px;
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--yellow);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+  .hero { padding: 80px 24px 60px; max-width: 900px; margin: 0 auto; }
+  .hero-tag { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--yellow); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
   .hero-tag::before { content: '▶'; font-size: 8px; }
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(64px, 12vw, 120px);
-    line-height: 0.9;
-    letter-spacing: 2px;
-    margin-bottom: 24px;
-  }
+  .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px, 12vw, 120px); line-height: 0.9; letter-spacing: 2px; margin-bottom: 24px; }
   .hero h1 em { color: var(--yellow); font-style: normal; }
-  .hero p {
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    color: #999;
-    max-width: 480px;
-    line-height: 1.8;
-    margin-bottom: 32px;
-  }
-  .hero-stats {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .stat { }
-  .stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    color: var(--yellow);
-    line-height: 1;
-  }
-  .stat-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+  .hero p { font-family: 'Space Mono', monospace; font-size: 13px; color: #999; max-width: 480px; line-height: 1.8; margin-bottom: 32px; }
+  .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--yellow); line-height: 1; }
+  .stat-label { font-family: 'Space Mono', monospace; font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; }
 
-  /* TICKER */
-  .ticker {
-    background: var(--yellow);
-    color: var(--black);
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 10px 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .ticker-inner {
-    display: inline-block;
-    animation: ticker 25s linear infinite;
-  }
-  @keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+  .ticker { background: var(--yellow); color: var(--black); font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; padding: 10px 0; overflow: hidden; white-space: nowrap; }
+  .ticker-inner { display: inline-block; animation: ticker 25s linear infinite; }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  /* CONTAINER */
   .container { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
 
-  /* CATEGORY */
   .category { margin-bottom: 64px; }
-  .cat-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+  .cat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
   .cat-line { flex: 1; height: 1px; background: #2a2a2a; }
-  .cat-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 3px;
-    color: var(--white);
-    white-space: nowrap;
-  }
+  .cat-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--white); white-space: nowrap; }
   .cat-icon { font-size: 18px; }
 
-  /* CARDS */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 2px;
-  }
-  .card {
-    background: var(--gray);
-    padding: 24px 20px;
-    border: 1px solid #222;
-    transition: all 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--yellow);
-    transform: scaleY(0);
-    transition: transform 0.2s;
-    transform-origin: bottom;
-  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2px; }
+  .card { background: var(--gray); padding: 24px 20px; border: 1px solid #222; transition: all 0.2s; position: relative; overflow: hidden; }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--yellow); transform: scaleY(0); transition: transform 0.2s; transform-origin: bottom; }
   .card:hover { background: #1f1f1f; transform: translateY(-3px); }
   .card:hover::before { transform: scaleY(1); }
-
   .card-icon { font-size: 24px; margin-bottom: 12px; }
-  .card-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-    color: var(--white);
-  }
-  .card-bonus {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--green);
-    margin-bottom: 10px;
-    font-weight: 700;
-  }
-  .card-desc {
-    font-size: 12px;
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  .card a {
-    display: block;
-    text-align: center;
-    background: var(--yellow);
-    color: var(--black);
-    text-decoration: none;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 10px 0;
-    letter-spacing: 0.05em;
-    transition: background 0.15s;
-  }
+  .card-name { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; margin-bottom: 4px; color: var(--white); }
+  .card-bonus { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--green); margin-bottom: 10px; font-weight: 700; }
+  .card-desc { font-size: 12px; color: #777; line-height: 1.6; margin-bottom: 20px; }
+  .card a { display: block; text-align: center; background: var(--yellow); color: var(--black); text-decoration: none; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; padding: 10px 0; letter-spacing: 0.05em; transition: background 0.15s; }
   .card a:hover { background: #fff; }
 
-  /* HOW IT WORKS */
-  .how {
+  .how { background: var(--gray); border: 1px solid #2a2a2a; padding: 48px; margin-bottom: 64px; }
+  .how h2 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 3px; margin-bottom: 32px; color: var(--yellow); }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px; }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: #2a2a2a; line-height: 1; margin-bottom: 8px; }
+  .step-title { font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .step-desc { font-size: 12px; color: #666; line-height: 1.6; }
+
+  /* SUGGEST SECTION */
+  .suggest {
     background: var(--gray);
     border: 1px solid #2a2a2a;
+    border-left: 4px solid var(--yellow);
     padding: 48px;
     margin-bottom: 64px;
   }
-  .how h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px;
-    letter-spacing: 3px;
-    margin-bottom: 32px;
-    color: var(--yellow);
+  .suggest h2 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 3px; color: var(--yellow); margin-bottom: 8px; }
+  .suggest .sub { font-family: 'Space Mono', monospace; font-size: 12px; color: #888; margin-bottom: 8px; line-height: 1.8; }
+  .drawing-badge {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
   }
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 32px;
+  .suggest-form { display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
+  .suggest-form input, .suggest-form textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
   }
-  .step-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 64px;
-    color: #2a2a2a;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .step-title {
+  .suggest-form input:focus, .suggest-form textarea:focus { border-color: var(--yellow); }
+  .suggest-form input::placeholder, .suggest-form textarea::placeholder { color: #444; }
+  .suggest-form textarea { resize: vertical; min-height: 80px; }
+  .suggest-btn {
+    background: var(--yellow);
+    color: var(--black);
+    border: none;
     font-family: 'Space Mono', monospace;
     font-size: 12px;
     font-weight: 700;
-    color: var(--white);
-    margin-bottom: 6px;
+    padding: 14px 28px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    transition: background 0.15s;
+    align-self: flex-start;
   }
-  .step-desc { font-size: 12px; color: #666; line-height: 1.6; }
+  .suggest-btn:hover { background: #fff; }
+  .success-msg { display: none; font-family: 'Space Mono', monospace; font-size: 12px; color: var(--green); margin-top: 12px; }
+  .shoutout-box { margin-top: 32px; }
+  .shoutout-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2px; color: #555; margin-bottom: 12px; }
+  .shoutouts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .shoutout-tag { background: #111; border: 1px solid #2a2a2a; font-family: 'Space Mono', monospace; font-size: 10px; color: #666; padding: 6px 12px; }
 
-  /* FOOTER */
-  footer {
-    border-top: 1px solid #222;
-    padding: 32px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    color: var(--yellow);
-    letter-spacing: 2px;
-  }
-  .footer-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: #444;
-  }
+  footer { border-top: 1px solid #222; padding: 32px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--yellow); letter-spacing: 2px; }
+  .footer-text { font-family: 'Space Mono', monospace; font-size: 10px; color: #444; }
 </style>
 </head>
 <body>
@@ -302,7 +180,6 @@
 
 <div class="container">
 
-  <!-- HOW IT WORKS -->
   <div class="how">
     <h2>HOW IT WORKS</h2>
     <div class="steps">
@@ -329,7 +206,6 @@
     </div>
   </div>
 
-  <!-- GAS FOOD EVERYDAY -->
   <div class="category">
     <div class="cat-header">
       <span class="cat-icon">⛽</span>
@@ -341,7 +217,7 @@
         <div class="card-icon">⛽</div>
         <div class="card-name">Upside</div>
         <div class="card-bonus">▲ 15¢/gal + 10% back</div>
-        <div class="card-desc">Get 15¢ extra per gallon on your first gas fill-up and 10% back on your first restaurant or grocery purchase. Code: CLINT5482</div>
+        <div class="card-desc">Get 15¢ extra per gallon on your first gas fill-up and 10% back on first restaurant or grocery purchase. Code: CLINT5482</div>
         <a href="https://upside.app.link/CLINT5482" target="_blank">GRAB DEAL →</a>
       </div>
       <div class="card">
@@ -368,7 +244,6 @@
     </div>
   </div>
 
-  <!-- CASH & PAYMENTS -->
   <div class="category">
     <div class="cat-header">
       <span class="cat-icon">💸</span>
@@ -386,7 +261,6 @@
     </div>
   </div>
 
-  <!-- BANKING & FINANCE -->
   <div class="category">
     <div class="cat-header">
       <span class="cat-icon">🏦</span>
@@ -446,7 +320,6 @@
     </div>
   </div>
 
-  <!-- GAMING & REWARDS -->
   <div class="category">
     <div class="cat-header">
       <span class="cat-icon">🎮</span>
@@ -478,7 +351,6 @@
     </div>
   </div>
 
-  <!-- TOOLS & APPS -->
   <div class="category">
     <div class="cat-header">
       <span class="cat-icon">☁️</span>
@@ -496,12 +368,52 @@
     </div>
   </div>
 
+  <!-- SUGGEST A DEAL -->
+  <div class="suggest">
+    <h2>GOT A DEAL?</h2>
+    <p class="sub">// Know an app with a referral bonus we should add? Drop it below. We'll check it out, add it to the site, and shout you out. Every quarter we pick one suggester for a special prize drawing.</p>
+    <div class="drawing-badge">🎲 Q2 2026 Drawing — Enter Now</div>
+    <div class="suggest-form">
+      <input type="text" id="suggest-name" placeholder="Your name or handle (for the shoutout)" />
+      <input type="text" id="suggest-app" placeholder="App name + your referral link (if you have one)" />
+      <input type="email" id="suggest-email" placeholder="Your email (for the drawing — kept private)" />
+      <textarea id="suggest-note" placeholder="Anything else? Why do you love this app?"></textarea>
+      <button class="suggest-btn" onclick="submitSuggestion()">SUBMIT & ENTER DRAWING →</button>
+      <div class="success-msg" id="success-msg">⚡ Got it! You're entered in the Q2 drawing. We'll check out the app and shout you out if we add it!</div>
+    </div>
+
+    <div class="shoutout-box">
+      <div class="shoutout-title">COMMUNITY SHOUTOUTS</div>
+      <div class="shoutouts">
+        <div class="shoutout-tag">// your name could be here</div>
+        <div class="shoutout-tag">// suggest a deal to get shouted out</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <footer>
   <div class="footer-logo">GETMONEYBACK</div>
   <div class="footer-text">© 2026 · All deals are real · All bonuses go to you · No BS</div>
 </footer>
+
+<script>
+function submitSuggestion() {
+  var name = document.getElementById('suggest-name').value;
+  var app = document.getElementById('suggest-app').value;
+  var email = document.getElementById('suggest-email').value;
+  if (!name || !app || !email) {
+    alert('Please fill in your name, app suggestion, and email to enter the drawing!');
+    return;
+  }
+  document.getElementById('success-msg').style.display = 'block';
+  document.getElementById('suggest-name').value = '';
+  document.getElementById('suggest-app').value = '';
+  document.getElementById('suggest-email').value = '';
+  document.getElementById('suggest-note').value = '';
+}
+</script>
 
 </body>
 </html>
