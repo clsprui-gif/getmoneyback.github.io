@@ -3,184 +3,504 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Money Back — Free Deals & Bonuses</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Get Money Back — Free Cash, Deals & Bonuses</title>
+<meta name="description" content="Real referral deals that pay YOU. Free cash, crypto bonuses, gas savings and more. Click a link, sign up, get paid. No BS.">
+<meta name="keywords" content="free money, referral deals, cash bonuses, crypto bonus, free cash app money, chime bonus, sofi bonus, upside gas savings, fetch rewards, get money back">
+<meta property="og:title" content="Get Money Back — Free Cash & Bonuses">
+<meta property="og:description" content="Real deals that pay YOU. Sign up through these links and get free cash, crypto, and rewards instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://clsprui-gif.github.io/getmoneyback.github.io/">
+<link rel="canonical" href="https://clsprui-gif.github.io/getmoneyback.github.io/">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; background: #f7f7f5; color: #1a1a1a; }
-
-  header {
-    background: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 48px 20px 36px;
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0e8;
+    --yellow: #f5e642;
+    --red: #e63322;
+    --green: #2ecc71;
+    --gray: #1a1a1a;
+    --mid: #2d2d2d;
   }
-  header h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 10px; }
-  header p { font-size: 16px; color: #aaa; max-width: 480px; margin: 0 auto; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); }
 
-  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+  /* HEADER */
+  header {
+    border-bottom: 3px solid var(--yellow);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    background: var(--black);
+    z-index: 100;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--yellow);
+  }
+  .logo span { color: var(--white); }
+  nav { font-family: 'Space Mono', monospace; font-size: 11px; color: #888; }
 
-  .category { margin-bottom: 40px; }
-  .category h2 {
-    font-size: 12px;
-    font-weight: 600;
+  /* HERO */
+  .hero {
+    padding: 80px 24px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--yellow);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-tag::before { content: '▶'; font-size: 8px; }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 12vw, 120px);
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h1 em { color: var(--yellow); font-style: normal; }
+  .hero p {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: #999;
+    max-width: 480px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .stat { }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--yellow);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #666;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #888;
-    margin-bottom: 14px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e5e5e0;
   }
 
+  /* TICKER */
+  .ticker {
+    background: var(--yellow);
+    color: var(--black);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+  }
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* CONTAINER */
+  .container { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
+
+  /* CATEGORY */
+  .category { margin-bottom: 64px; }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .cat-line { flex: 1; height: 1px; background: #2a2a2a; }
+  .cat-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--white);
+    white-space: nowrap;
+  }
+  .cat-icon { font-size: 18px; }
+
+  /* CARDS */
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2px;
   }
-
   .card {
-    background: white;
-    border-radius: 14px;
-    padding: 20px;
-    border: 1px solid #ebebeb;
-    transition: transform 0.15s, box-shadow 0.15s;
+    background: var(--gray);
+    padding: 24px 20px;
+    border: 1px solid #222;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
   }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    transform-origin: bottom;
+  }
+  .card:hover { background: #1f1f1f; transform: translateY(-3px); }
+  .card:hover::before { transform: scaleY(1); }
 
-  .card-icon { font-size: 28px; margin-bottom: 10px; }
-  .card-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-  .card-bonus { font-size: 13px; font-weight: 500; color: #16a34a; margin-bottom: 8px; }
-  .card-desc { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 16px; }
-
+  .card-icon { font-size: 24px; margin-bottom: 12px; }
+  .card-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    color: var(--white);
+  }
+  .card-bonus {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--green);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .card-desc {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
   .card a {
     display: block;
     text-align: center;
-    background: #1a1a1a;
-    color: white;
+    background: var(--yellow);
+    color: var(--black);
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 9px 0;
-    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 10px 0;
+    letter-spacing: 0.05em;
     transition: background 0.15s;
   }
-  .card a:hover { background: #333; }
+  .card a:hover { background: #fff; }
 
+  /* HOW IT WORKS */
+  .how {
+    background: var(--gray);
+    border: 1px solid #2a2a2a;
+    padding: 48px;
+    margin-bottom: 64px;
+  }
+  .how h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+    color: var(--yellow);
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 32px;
+  }
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    color: #2a2a2a;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .step-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .step-desc { font-size: 12px; color: #666; line-height: 1.6; }
+
+  /* FOOTER */
   footer {
-    text-align: center;
-    padding: 32px 20px;
-    font-size: 13px;
-    color: #aaa;
-    border-top: 1px solid #e5e5e0;
+    border-top: 1px solid #222;
+    padding: 32px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--yellow);
+    letter-spacing: 2px;
+  }
+  .footer-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #444;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>💰 Get Money Back</h1>
-  <p>Real deals, real bonuses. Sign up through these links and get paid just for trying something new.</p>
+  <div class="logo">GET<span>MONEY</span>BACK</div>
+  <nav>FREE CASH · REAL DEALS · NO BS</nav>
 </header>
+
+<div class="ticker">
+  <span class="ticker-inner">
+    ⚡ CHIME BONUS &nbsp;·&nbsp; 💰 SOFI UP TO $400 &nbsp;·&nbsp; ⛽ UPSIDE 15¢/GAL &nbsp;·&nbsp; 🎯 FREECASH REWARDS &nbsp;·&nbsp; 💎 GEMINI CRYPTO &nbsp;·&nbsp; 🧾 FETCH GIFT CARDS &nbsp;·&nbsp; 💸 CASH APP $5 FREE &nbsp;·&nbsp; 🏈 DRAFTKINGS BONUS &nbsp;·&nbsp; 📦 DROPBOX STORAGE &nbsp;·&nbsp; ⚡ CHIME BONUS &nbsp;·&nbsp; 💰 SOFI UP TO $400 &nbsp;·&nbsp; ⛽ UPSIDE 15¢/GAL &nbsp;·&nbsp; 🎯 FREECASH REWARDS &nbsp;·&nbsp; 💎 GEMINI CRYPTO &nbsp;·&nbsp; 🧾 FETCH GIFT CARDS &nbsp;·&nbsp; 💸 CASH APP $5 FREE &nbsp;·&nbsp; 🏈 DRAFTKINGS BONUS &nbsp;·&nbsp; 📦 DROPBOX STORAGE &nbsp;·&nbsp;
+  </span>
+</div>
+
+<div class="hero">
+  <div class="hero-tag">The only deals page you need</div>
+  <h1>CLICK.<br><em>SIGN UP.</em><br>GET PAID.</h1>
+  <p>// No surveys. No gimmicks. Just real referral bonuses from apps you actually use. Click a link, sign up, collect your cash.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">16+</div>
+      <div class="stat-label">Live Deals</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">$1K+</div>
+      <div class="stat-label">In Free Bonuses</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Free to Use</div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
 
-  <div class="category">
-    <h2>🍔 Food & Delivery</h2>
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-icon">🍔</div>
-        <div class="card-name">Uber Eats</div>
-        <div class="card-bonus">$10 off first order</div>
-        <div class="card-desc">Free delivery + discount on your first order. New users only.</div>
-        <a href="PASTE_YOUR_UBEREATS_LINK_HERE" target="_blank">Grab deal →</a>
+  <!-- HOW IT WORKS -->
+  <div class="how">
+    <h2>HOW IT WORKS</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Pick a deal</div>
+        <div class="step-desc">Browse the deals below and pick one that interests you.</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🚗</div>
-        <div class="card-name">DoorDash</div>
-        <div class="card-bonus">$15 off first order</div>
-        <div class="card-desc">Get $15 off plus free delivery on your first DoorDash order.</div>
-        <a href="PASTE_YOUR_DOORDASH_LINK_HERE" target="_blank">Grab deal →</a>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Click the link</div>
+        <div class="step-desc">Hit the button and sign up for the app or service.</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🛒</div>
-        <div class="card-name">Instacart</div>
-        <div class="card-bonus">Free delivery</div>
-        <div class="card-desc">Free delivery on your first 3 grocery orders.</div>
-        <a href="PASTE_YOUR_INSTACART_LINK_HERE" target="_blank">Grab deal →</a>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Get your bonus</div>
+        <div class="step-desc">The bonus hits your account automatically. Real cash, real rewards.</div>
       </div>
-
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Share it</div>
+        <div class="step-desc">Love a deal? Share this page and help your people get paid too.</div>
+      </div>
     </div>
   </div>
 
+  <!-- GAS FOOD EVERYDAY -->
   <div class="category">
-    <h2>💸 Finance & Free Money</h2>
+    <div class="cat-header">
+      <span class="cat-icon">⛽</span>
+      <span class="cat-title">GAS, FOOD & EVERYDAY SAVINGS</span>
+      <div class="cat-line"></div>
+    </div>
     <div class="cards">
+      <div class="card">
+        <div class="card-icon">⛽</div>
+        <div class="card-name">Upside</div>
+        <div class="card-bonus">▲ 15¢/gal + 10% back</div>
+        <div class="card-desc">Get 15¢ extra per gallon on your first gas fill-up and 10% back on your first restaurant or grocery purchase. Code: CLINT5482</div>
+        <a href="https://upside.app.link/CLINT5482" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧾</div>
+        <div class="card-name">Fetch Rewards</div>
+        <div class="card-bonus">▲ Bonus on first receipt</div>
+        <div class="card-desc">Turn receipts into gift cards. Use code ER9H35 to get a bonus on your first receipt scan.</div>
+        <a href="https://referral.fetch.com/vvv3/referralqr?code=ER9H35" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <div class="card-name">Field Agent</div>
+        <div class="card-bonus">▲ Earn on everyday tasks</div>
+        <div class="card-desc">Get paid to try new products and complete simple tasks near you.</div>
+        <a href="https://fieldagent.page.link/c4PMXU4jK3wqiL1H7" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌍</div>
+        <div class="card-name">Rwazi</div>
+        <div class="card-bonus">▲ Earn for sharing data</div>
+        <div class="card-desc">Get paid to share market data and insights from your area. Easy money!</div>
+        <a href="https://app.rwazi.com/referral?referrer=referrer_code=4014700" target="_blank">GRAB DEAL →</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- CASH & PAYMENTS -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">💸</span>
+      <span class="cat-title">CASH & PAYMENTS</span>
+      <div class="cat-line"></div>
+    </div>
+    <div class="cards">
       <div class="card">
         <div class="card-icon">💸</div>
         <div class="card-name">Cash App</div>
-        <div class="card-bonus">$5 free cash</div>
-        <div class="card-desc">Send $5, get $5 free instantly when you sign up.</div>
-        <a href="PASTE_YOUR_CASHAPP_LINK_HERE" target="_blank">Grab deal →</a>
+        <div class="card-bonus">▲ $5 free cash</div>
+        <div class="card-desc">Get $5 free when you send $5 or more. Use code SCFDD45 when signing up.</div>
+        <a href="https://cash.app/app/SCFDD45" target="_blank">GRAB DEAL →</a>
       </div>
-
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <div class="card-name">Robinhood</div>
-        <div class="card-bonus">Free stock</div>
-        <div class="card-desc">Get a free stock worth up to $200 just for signing up.</div>
-        <a href="PASTE_YOUR_ROBINHOOD_LINK_HERE" target="_blank">Grab deal →</a>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🪙</div>
-        <div class="card-name">Coinbase</div>
-        <div class="card-bonus">$10 in Bitcoin</div>
-        <div class="card-desc">Buy $100 in crypto and get $10 in Bitcoin free.</div>
-        <a href="PASTE_YOUR_COINBASE_LINK_HERE" target="_blank">Grab deal →</a>
-      </div>
-
     </div>
   </div>
 
+  <!-- BANKING & FINANCE -->
   <div class="category">
-    <h2>🛍️ Shopping & Cash Back</h2>
+    <div class="cat-header">
+      <span class="cat-icon">🏦</span>
+      <span class="cat-title">BANKING & FINANCE</span>
+      <div class="cat-line"></div>
+    </div>
     <div class="cards">
-
       <div class="card">
-        <div class="card-icon">💰</div>
-        <div class="card-name">Rakuten</div>
-        <div class="card-bonus">$30 welcome bonus</div>
-        <div class="card-desc">Get $30 cash back when you spend $30 at any store.</div>
-        <a href="PASTE_YOUR_RAKUTEN_LINK_HERE" target="_blank">Grab deal →</a>
+        <div class="card-icon">💚</div>
+        <div class="card-name">Chime</div>
+        <div class="card-bonus">▲ Cash bonus</div>
+        <div class="card-desc">Open a free Chime account and get a cash bonus when you set up direct deposit.</div>
+        <a href="https://www.chime.com/r/clintspruill/" target="_blank">GRAB DEAL →</a>
       </div>
+      <div class="card">
+        <div class="card-icon">🏦</div>
+        <div class="card-name">SoFi Checking</div>
+        <div class="card-bonus">▲ Up to $400 bonus</div>
+        <div class="card-desc">Get $25 to $400 when you open an account and set up direct deposit.</div>
+        <a href="https://www.sofi.com/invite/money?gcp=ed851450-f2f5-4b8b-b2c9-8ebb4f5efd76&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <div class="card-name">SoFi Credit</div>
+        <div class="card-bonus">▲ $10 in rewards</div>
+        <div class="card-desc">Earn $10 in rewards just for activating free credit score monitoring.</div>
+        <a href="https://www.sofi.com/invite/relay?gcp=936b8d68-7c86-4596-ac84-05e247b67eb4&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🪙</div>
+        <div class="card-name">SoFi Crypto</div>
+        <div class="card-bonus">▲ $25 free</div>
+        <div class="card-desc">Get $25 when you open an account and make a purchase of $50 or more.</div>
+        <a href="https://www.sofi.com/invite/crypto?gcp=71d3b0a4-2aa5-48a2-b081-8736902f612b&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏥</div>
+        <div class="card-name">SoFi Loans</div>
+        <div class="card-bonus">▲ $1,000 bonus</div>
+        <div class="card-desc">Special low rates for doctors and dentists. Earn a $1,000 bonus!</div>
+        <a href="https://www.sofi.com/invite/medical-student-loans?gcp=11d486b9-75eb-4179-902d-9ccc7c4c8f11&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏧</div>
+        <div class="card-name">Go2Bank</div>
+        <div class="card-bonus">▲ Cash bonus</div>
+        <div class="card-desc">Sign up for Go2Bank and get a cash bonus when you join.</div>
+        <a href="https://share.go2bank.com/sov2h" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <div class="card-name">Gemini Crypto</div>
+        <div class="card-bonus">▲ Free crypto</div>
+        <div class="card-desc">Join Gemini, the federally regulated crypto exchange, and earn a bonus.</div>
+        <a href="https://exchange.gemini.com/register?referral=w7lmzkyte&type=referral" target="_blank">GRAB DEAL →</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- GAMING & REWARDS -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">🎮</span>
+      <span class="cat-title">GAMING & REWARDS</span>
+      <div class="cat-line"></div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <div class="card-name">Freecash</div>
+        <div class="card-bonus">▲ Free cash & rewards</div>
+        <div class="card-desc">Complete tasks and surveys to earn real cash and gift cards.</div>
+        <a href="https://freecash.com/r/CallonYaGirl" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <div class="card-name">Kalshi</div>
+        <div class="card-bonus">▲ Bonus on signup</div>
+        <div class="card-desc">Trade on real world events and earn a bonus when you sign up.</div>
+        <a href="https://kalshi.com/sign-up/?referral=4c3ba8d7-2eb5-4b26-9950-20e341a937ab" target="_blank">GRAB DEAL →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏈</div>
+        <div class="card-name">DraftKings</div>
+        <div class="card-bonus">▲ Deposit bonus</div>
+        <div class="card-desc">Sign up for DraftKings and get a massive deposit bonus on your first bet.</div>
+        <a href="https://www.draftkings.com/r/clintallen00/US-DK/US-IA" target="_blank">GRAB DEAL →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS & APPS -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">☁️</span>
+      <span class="cat-title">TOOLS & APPS</span>
+      <div class="cat-line"></div>
+    </div>
+    <div class="cards">
       <div class="card">
         <div class="card-icon">📦</div>
-        <div class="card-name">Amazon</div>
-        <div class="card-bonus">Deals on everything</div>
-        <div class="card-desc">Shop millions of items. Best prices guaranteed.</div>
-        <a href="PASTE_YOUR_AMAZON_LINK_HERE" target="_blank">Shop now →</a>
+        <div class="card-name">Dropbox</div>
+        <div class="card-bonus">▲ Free bonus storage</div>
+        <div class="card-desc">Sign up for Dropbox and get extra free storage space instantly.</div>
+        <a href="https://www.dropbox.com/referrals/AABMngL2L07r8xDZpGg1FXyMFXsIEZRieqE?src=global9" target="_blank">GRAB DEAL →</a>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🍯</div>
-        <div class="card-name">Honey</div>
-        <div class="card-bonus">Auto saves money</div>
-        <div class="card-desc">Free browser extension that finds coupons automatically.</div>
-        <a href="PASTE_YOUR_HONEY_LINK_HERE" target="_blank">Get it free →</a>
-      </div>
-
     </div>
   </div>
 
 </div>
 
 <footer>
-  © 2026 GetMoneyBack · All deals are real. All bonuses go to you.
+  <div class="footer-logo">GETMONEYBACK</div>
+  <div class="footer-text">© 2026 · All deals are real · All bonuses go to you · No BS</div>
 </footer>
 
 </body>
