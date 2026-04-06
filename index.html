@@ -3,20 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Money Back — Free Cash, Deals & Bonuses</title>
-<meta name="description" content="Real referral deals that pay YOU. Free cash, crypto bonuses, gas savings and more. Click a link, sign up, get paid. No BS.">
-<meta name="keywords" content="free money, referral deals, cash bonuses, crypto bonus, free cash app money, chime bonus, sofi bonus, upside gas savings, fetch rewards, get money back">
-<meta property="og:title" content="Get Money Back — Free Cash & Bonuses">
-<meta property="og:description" content="Real deals that pay YOU. Sign up through these links and get free cash, crypto, and rewards instantly.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://clsprui-gif.github.io/getmoneyback.github.io/">
+<title>GitCash — Get Your Bonus. Get Paid. Git Cash.</title>
+<meta name="description" content="GitCash — the best referral deals on the internet. Free cash, crypto bonuses, gas savings and more. Click a link, sign up, get paid.">
 <meta name="google-site-verification" content="nzNl_I5kGyBToghvMMiRPBEwp97f3ZJO1-e2r3P_OTA" />
 <link rel="canonical" href="https://clsprui-gif.github.io/getmoneyback.github.io/">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --black: #0a0a0a;
-    --white: #f5f0e8;
+    --white: #ffffff;
+    --cream: #f5f0e8;
     --yellow: #f5e642;
     --red: #e63322;
     --green: #2ecc71;
@@ -26,388 +22,568 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); }
 
+  /* HEADER */
   header {
     border-bottom: 3px solid var(--yellow);
     padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
+    height: 70px;
     position: sticky;
     top: 0;
     background: var(--black);
     z-index: 100;
   }
-  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--yellow); }
-  .logo span { color: var(--white); }
-  nav { font-family: 'Space Mono', monospace; font-size: 11px; color: #888; }
+  .logo-wrap { display: flex; align-items: center; gap: 12px; }
+  .logo-script {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 42px;
+    color: var(--yellow);
+    line-height: 1;
+  }
+  .logo-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-left: 1px solid #333;
+    padding-left: 12px;
+    line-height: 1.6;
+  }
+  nav { font-family: 'Space Mono', monospace; font-size: 10px; color: #666; }
 
-  .hero { padding: 80px 24px 60px; max-width: 900px; margin: 0 auto; }
-  .hero-tag { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--yellow); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-  .hero-tag::before { content: '▶'; font-size: 8px; }
-  .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px, 12vw, 120px); line-height: 0.9; letter-spacing: 2px; margin-bottom: 24px; }
-  .hero h1 em { color: var(--yellow); font-style: normal; }
-  .hero p { font-family: 'Space Mono', monospace; font-size: 13px; color: #999; max-width: 480px; line-height: 1.8; margin-bottom: 32px; }
-  .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--yellow); line-height: 1; }
-  .stat-label { font-family: 'Space Mono', monospace; font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; }
-
-  .ticker { background: var(--yellow); color: var(--black); font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; padding: 10px 0; overflow: hidden; white-space: nowrap; }
-  .ticker-inner { display: inline-block; animation: ticker 25s linear infinite; }
+  /* TICKER */
+  .ticker { background: var(--yellow); color: var(--black); font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; padding: 8px 0; overflow: hidden; white-space: nowrap; }
+  .ticker-inner { display: inline-block; animation: ticker 30s linear infinite; }
   @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  .container { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
-
-  .category { margin-bottom: 64px; }
-  .cat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
-  .cat-line { flex: 1; height: 1px; background: #2a2a2a; }
-  .cat-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--white); white-space: nowrap; }
-  .cat-icon { font-size: 18px; }
-
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2px; }
-  .card { background: var(--gray); padding: 24px 20px; border: 1px solid #222; transition: all 0.2s; position: relative; overflow: hidden; }
-  .card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--yellow); transform: scaleY(0); transition: transform 0.2s; transform-origin: bottom; }
-  .card:hover { background: #1f1f1f; transform: translateY(-3px); }
-  .card:hover::before { transform: scaleY(1); }
-  .card-icon { font-size: 24px; margin-bottom: 12px; }
-  .card-name { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; margin-bottom: 4px; color: var(--white); }
-  .card-bonus { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--green); margin-bottom: 10px; font-weight: 700; }
-  .card-desc { font-size: 12px; color: #777; line-height: 1.6; margin-bottom: 20px; }
-  .card a { display: block; text-align: center; background: var(--yellow); color: var(--black); text-decoration: none; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; padding: 10px 0; letter-spacing: 0.05em; transition: background 0.15s; }
-  .card a:hover { background: #fff; }
-
-  .how { background: var(--gray); border: 1px solid #2a2a2a; padding: 48px; margin-bottom: 64px; }
-  .how h2 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 3px; margin-bottom: 32px; color: var(--yellow); }
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px; }
-  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: #2a2a2a; line-height: 1; margin-bottom: 8px; }
-  .step-title { font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
-  .step-desc { font-size: 12px; color: #666; line-height: 1.6; }
-
-  /* SUGGEST SECTION */
-  .suggest {
-    background: var(--gray);
-    border: 1px solid #2a2a2a;
-    border-left: 4px solid var(--yellow);
-    padding: 48px;
-    margin-bottom: 64px;
+  /* HERO */
+  .hero { padding: 70px 24px 50px; max-width: 960px; margin: 0 auto; text-align: center; }
+  .hero-script {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(80px, 15vw, 160px);
+    color: var(--white);
+    line-height: 0.9;
+    margin-bottom: 8px;
   }
-  .suggest h2 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 3px; color: var(--yellow); margin-bottom: 8px; }
-  .suggest .sub { font-family: 'Space Mono', monospace; font-size: 12px; color: #888; margin-bottom: 8px; line-height: 1.8; }
-  .drawing-badge {
-    display: inline-block;
-    background: var(--red);
-    color: white;
+  .hero-script span { color: var(--yellow); }
+  .hero-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(18px, 4vw, 32px);
+    letter-spacing: 6px;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .hero-desc {
     font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 4px 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
+    font-size: 12px;
+    color: #777;
+    max-width: 460px;
+    margin: 0 auto 40px;
+    line-height: 1.9;
   }
-  .suggest-form { display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
-  .suggest-form input, .suggest-form textarea {
-    background: #111;
+
+  /* COUNTER */
+  .counter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    padding: 28px;
+    border: 1px solid #222;
+    background: var(--gray);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+  }
+  .counter-item { text-align: center; }
+  .counter-num {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 52px;
+    color: var(--yellow);
+    line-height: 1;
+  }
+  .counter-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  /* SEARCH & FILTER */
+  .controls {
+    max-width: 960px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .search-wrap { flex: 1; min-width: 200px; position: relative; }
+  .search-wrap input {
+    width: 100%;
+    background: var(--gray);
     border: 1px solid #333;
     color: var(--white);
     font-family: 'Space Mono', monospace;
     font-size: 12px;
-    padding: 14px 16px;
+    padding: 12px 16px 12px 40px;
     outline: none;
     transition: border-color 0.2s;
-    width: 100%;
   }
-  .suggest-form input:focus, .suggest-form textarea:focus { border-color: var(--yellow); }
-  .suggest-form input::placeholder, .suggest-form textarea::placeholder { color: #444; }
-  .suggest-form textarea { resize: vertical; min-height: 80px; }
-  .suggest-btn {
+  .search-wrap input:focus { border-color: var(--yellow); }
+  .search-wrap input::placeholder { color: #444; }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #444;
+    font-size: 14px;
+  }
+  .filter-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .filter-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: #666;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
+  .sort-select {
+    background: var(--gray);
+    border: 1px solid #333;
+    color: #666;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 10px 16px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .sort-select:focus { border-color: var(--yellow); }
+
+  /* CONTAINER */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px 60px; }
+
+  /* NO RESULTS */
+  .no-results { display: none; text-align: center; padding: 60px; font-family: 'Space Mono', monospace; font-size: 13px; color: #444; }
+
+  /* CARDS GRID */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2px; }
+
+  /* CARD */
+  .card {
+    background: var(--gray);
+    padding: 24px 20px;
+    border: 1px solid #1e1e1e;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    transform-origin: bottom;
+  }
+  .card:hover { background: #1f1f1f; transform: translateY(-3px); }
+  .card:hover::before { transform: scaleY(1); }
+  .card[data-new="true"] .new-badge { display: flex; }
+
+  /* DIAMOND NEW BADGE */
+  .new-badge {
+    display: none;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
     background: var(--yellow);
     color: var(--black);
-    border: none;
     font-family: 'Space Mono', monospace;
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 700;
-    padding: 14px 28px;
-    cursor: pointer;
+    padding: 3px 8px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: background 0.15s;
-    align-self: flex-start;
+    clip-path: polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%);
   }
-  .suggest-btn:hover { background: #fff; }
-  .success-msg { display: none; font-family: 'Space Mono', monospace; font-size: 12px; color: var(--green); margin-top: 12px; }
-  .shoutout-box { margin-top: 32px; }
-  .shoutout-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2px; color: #555; margin-bottom: 12px; }
-  .shoutouts { display: flex; flex-wrap: wrap; gap: 8px; }
-  .shoutout-tag { background: #111; border: 1px solid #2a2a2a; font-family: 'Space Mono', monospace; font-size: 10px; color: #666; padding: 6px 12px; }
+  .new-badge::before { content: '◆'; font-size: 7px; }
 
-  footer { border-top: 1px solid #222; padding: 32px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--yellow); letter-spacing: 2px; }
-  .footer-text { font-family: 'Space Mono', monospace; font-size: 10px; color: #444; }
+  .card-icon { font-size: 24px; margin-bottom: 12px; margin-top: 4px; }
+  .card-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 2px; color: var(--white); }
+  .card-bonus { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--green); margin-bottom: 10px; font-weight: 700; }
+  .card-value { font-family: 'Bebas Neue', sans-serif; font-size: 13px; color: #444; margin-bottom: 8px; }
+  .card-desc { font-size: 12px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+  .card-cat { font-family: 'Space Mono', monospace; font-size: 9px; color: #444; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+  .card a {
+    display: block;
+    text-align: center;
+    background: var(--yellow);
+    color: var(--black);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 10px 0;
+    letter-spacing: 0.05em;
+    transition: background 0.15s;
+  }
+  .card a:hover { background: var(--white); }
+
+  /* HOW IT WORKS */
+  .how { border: 1px solid #1e1e1e; padding: 48px; margin-bottom: 48px; background: var(--gray); }
+  .how h2 { font-family: 'Pinyon Script', cursive; font-size: 72px; color: var(--yellow); margin-bottom: 32px; line-height: 1; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px; }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: #222; line-height: 1; margin-bottom: 8px; }
+  .step-title { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: var(--white); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .step-desc { font-size: 12px; color: #555; line-height: 1.6; }
+
+  /* SUGGEST */
+  .suggest { background: var(--gray); border: 1px solid #1e1e1e; border-left: 4px solid var(--yellow); padding: 48px; margin-bottom: 48px; }
+  .suggest h2 { font-family: 'Pinyon Script', cursive; font-size: 72px; color: var(--yellow); margin-bottom: 8px; line-height: 1; }
+  .suggest .sub { font-family: 'Space Mono', monospace; font-size: 11px; color: #666; margin-bottom: 8px; line-height: 1.9; }
+  .drawing-badge { display: inline-block; background: var(--red); color: white; font-family: 'Space Mono', monospace; font-size: 9px; font-weight: 700; padding: 4px 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 28px; }
+  .suggest-form { display: flex; flex-direction: column; gap: 12px; max-width: 520px; }
+  .suggest-form input, .suggest-form textarea { background: #111; border: 1px solid #2a2a2a; color: var(--white); font-family: 'Space Mono', monospace; font-size: 11px; padding: 12px 14px; outline: none; transition: border-color 0.2s; width: 100%; }
+  .suggest-form input:focus, .suggest-form textarea:focus { border-color: var(--yellow); }
+  .suggest-form input::placeholder, .suggest-form textarea::placeholder { color: #333; }
+  .suggest-form textarea { resize: vertical; min-height: 70px; }
+  .suggest-btn { background: var(--yellow); color: var(--black); border: none; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; padding: 12px 24px; cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.15s; align-self: flex-start; }
+  .suggest-btn:hover { background: var(--white); }
+  .success-msg { display: none; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--green); margin-top: 10px; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid #1a1a1a; padding: 32px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-family: 'Pinyon Script', cursive; font-size: 32px; color: var(--yellow); }
+  .footer-text { font-family: 'Space Mono', monospace; font-size: 9px; color: #333; }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">GET<span>MONEY</span>BACK</div>
-  <nav>FREE CASH · REAL DEALS · NO BS</nav>
+  <div class="logo-wrap">
+    <div class="logo-script">GitCash</div>
+    <div class="logo-tag">Get your bonus.<br>Get paid. Git cash.</div>
+  </div>
+  <nav>FREE · REAL · NO BS</nav>
 </header>
 
 <div class="ticker">
   <span class="ticker-inner">
-    ⚡ CHIME BONUS &nbsp;·&nbsp; 💰 SOFI UP TO $400 &nbsp;·&nbsp; ⛽ UPSIDE 15¢/GAL &nbsp;·&nbsp; 🎯 FREECASH REWARDS &nbsp;·&nbsp; 💎 GEMINI CRYPTO &nbsp;·&nbsp; 🧾 FETCH GIFT CARDS &nbsp;·&nbsp; 💸 CASH APP $5 FREE &nbsp;·&nbsp; 🏈 DRAFTKINGS BONUS &nbsp;·&nbsp; 📦 DROPBOX STORAGE &nbsp;·&nbsp; ⚡ CHIME BONUS &nbsp;·&nbsp; 💰 SOFI UP TO $400 &nbsp;·&nbsp; ⛽ UPSIDE 15¢/GAL &nbsp;·&nbsp; 🎯 FREECASH REWARDS &nbsp;·&nbsp; 💎 GEMINI CRYPTO &nbsp;·&nbsp; 🧾 FETCH GIFT CARDS &nbsp;·&nbsp; 💸 CASH APP $5 FREE &nbsp;·&nbsp; 🏈 DRAFTKINGS BONUS &nbsp;·&nbsp; 📦 DROPBOX STORAGE &nbsp;·&nbsp;
+    ◆ CHIME BONUS &nbsp;·&nbsp; ◆ SOFI UP TO $400 &nbsp;·&nbsp; ◆ UPSIDE 15¢/GAL &nbsp;·&nbsp; ◆ FREECASH REWARDS &nbsp;·&nbsp; ◆ GEMINI CRYPTO &nbsp;·&nbsp; ◆ FETCH GIFT CARDS &nbsp;·&nbsp; ◆ CASH APP $5 FREE &nbsp;·&nbsp; ◆ DRAFTKINGS BONUS &nbsp;·&nbsp; ◆ DROPBOX STORAGE &nbsp;·&nbsp; ◆ CHIME BONUS &nbsp;·&nbsp; ◆ SOFI UP TO $400 &nbsp;·&nbsp; ◆ UPSIDE 15¢/GAL &nbsp;·&nbsp; ◆ FREECASH REWARDS &nbsp;·&nbsp; ◆ GEMINI CRYPTO &nbsp;·&nbsp; ◆ FETCH GIFT CARDS &nbsp;·&nbsp; ◆ CASH APP $5 FREE &nbsp;·&nbsp; ◆ DRAFTKINGS BONUS &nbsp;·&nbsp; ◆ DROPBOX STORAGE &nbsp;·&nbsp;
   </span>
 </div>
 
 <div class="hero">
-  <div class="hero-tag">The only deals page you need</div>
-  <h1>CLICK.<br><em>SIGN UP.</em><br>GET PAID.</h1>
-  <p>// No surveys. No gimmicks. Just real referral bonuses from apps you actually use. Click a link, sign up, collect your cash.</p>
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-num">16+</div>
-      <div class="stat-label">Live Deals</div>
+  <div class="hero-script">Git<span>Cash</span></div>
+  <div class="hero-sub">Get your bonus · Get paid · Git cash</div>
+  <p class="hero-desc">// Real referral bonuses from apps you actually use. Click a link, sign up, collect your cash. No gimmicks. No BS.</p>
+
+  <div class="counter-bar">
+    <div class="counter-item">
+      <div class="counter-num">16</div>
+      <div class="counter-label">Live Deals</div>
     </div>
-    <div class="stat">
-      <div class="stat-num">$1K+</div>
-      <div class="stat-label">In Free Bonuses</div>
+    <div class="counter-item">
+      <div class="counter-num">$1,440</div>
+      <div class="counter-label">In Free Bonuses</div>
     </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Free to Use</div>
+    <div class="counter-item">
+      <div class="counter-num">100%</div>
+      <div class="counter-label">Free to Use</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">0</div>
+      <div class="counter-label">BS on this page</div>
     </div>
   </div>
+</div>
+
+<!-- SEARCH & FILTER -->
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input type="text" id="search-input" placeholder="Search deals..." oninput="filterCards()" />
+  </div>
+  <div class="filter-btns">
+    <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+    <button class="filter-btn" onclick="setFilter('food', this)">⛽ Gas & Food</button>
+    <button class="filter-btn" onclick="setFilter('cash', this)">💸 Cash</button>
+    <button class="filter-btn" onclick="setFilter('banking', this)">🏦 Banking</button>
+    <button class="filter-btn" onclick="setFilter('gaming', this)">🎮 Gaming</button>
+    <button class="filter-btn" onclick="setFilter('tools', this)">☁️ Tools</button>
+  </div>
+  <select class="sort-select" onchange="sortCards(this.value)">
+    <option value="default">Sort by: Default</option>
+    <option value="highest">Highest Paying First</option>
+    <option value="newest">Newest First</option>
+  </select>
 </div>
 
 <div class="container">
+  <div class="no-results" id="no-results">// No deals found. Try a different search!</div>
+  <div class="cards-grid" id="cards-grid">
 
+    <!-- CARDS -->
+    <div class="card" data-cat="banking" data-value="400" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🏦</div>
+      <div class="card-name">SoFi Checking</div>
+      <div class="card-bonus">▲ Up to $400 bonus</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Get $25 to $400 when you open an account and set up direct deposit.</div>
+      <a href="https://www.sofi.com/invite/money?gcp=ed851450-f2f5-4b8b-b2c9-8ebb4f5efd76&isAliasGcp=false" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="banking" data-value="1000" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🏥</div>
+      <div class="card-name">SoFi Loans</div>
+      <div class="card-bonus">▲ $1,000 bonus</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Special low rates for doctors and dentists. Earn a $1,000 bonus!</div>
+      <a href="https://www.sofi.com/invite/medical-student-loans?gcp=11d486b9-75eb-4179-902d-9ccc7c4c8f11&isAliasGcp=false" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="banking" data-value="25" data-new="true">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🪙</div>
+      <div class="card-name">SoFi Crypto</div>
+      <div class="card-bonus">▲ $25 free</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Get $25 when you open an account and make a purchase of $50 or more.</div>
+      <a href="https://www.sofi.com/invite/crypto?gcp=71d3b0a4-2aa5-48a2-b081-8736902f612b&isAliasGcp=false" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="banking" data-value="10" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">📊</div>
+      <div class="card-name">SoFi Credit</div>
+      <div class="card-bonus">▲ $10 in rewards</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Earn $10 in rewards just for activating free credit score monitoring.</div>
+      <a href="https://www.sofi.com/invite/relay?gcp=936b8d68-7c86-4596-ac84-05e247b67eb4&isAliasGcp=false" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="banking" data-value="50" data-new="true">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">💚</div>
+      <div class="card-name">Chime</div>
+      <div class="card-bonus">▲ Cash bonus</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Open a free Chime account and get a cash bonus when you set up direct deposit.</div>
+      <a href="https://www.chime.com/r/clintspruill/" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="banking" data-value="30" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🏧</div>
+      <div class="card-name">Go2Bank</div>
+      <div class="card-bonus">▲ Cash bonus</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Sign up for Go2Bank and get a cash bonus when you join.</div>
+      <a href="https://share.go2bank.com/sov2h" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="banking" data-value="75" data-new="true">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">💎</div>
+      <div class="card-name">Gemini Crypto</div>
+      <div class="card-bonus">▲ Free crypto</div>
+      <div class="card-cat">Banking & Finance</div>
+      <div class="card-desc">Join Gemini, the federally regulated crypto exchange, and earn a bonus.</div>
+      <a href="https://exchange.gemini.com/register?referral=w7lmzkyte&type=referral" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="cash" data-value="5" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">💸</div>
+      <div class="card-name">Cash App</div>
+      <div class="card-bonus">▲ $5 free cash</div>
+      <div class="card-cat">Cash & Payments</div>
+      <div class="card-desc">Get $5 free when you send $5 or more. Use code SCFDD45 when signing up.</div>
+      <a href="https://cash.app/app/SCFDD45" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="food" data-value="20" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">⛽</div>
+      <div class="card-name">Upside</div>
+      <div class="card-bonus">▲ 15¢/gal + 10% back</div>
+      <div class="card-cat">Gas & Food</div>
+      <div class="card-desc">Get 15¢ extra per gallon on your first gas fill-up and 10% back on first restaurant or grocery purchase. Code: CLINT5482</div>
+      <a href="https://upside.app.link/CLINT5482" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="food" data-value="10" data-new="true">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🧾</div>
+      <div class="card-name">Fetch Rewards</div>
+      <div class="card-bonus">▲ Bonus on first receipt</div>
+      <div class="card-cat">Gas & Food</div>
+      <div class="card-desc">Turn receipts into gift cards. Use code ER9H35 to get a bonus on your first receipt scan.</div>
+      <a href="https://referral.fetch.com/vvv3/referralqr?code=ER9H35" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="food" data-value="15" data-new="true">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🛒</div>
+      <div class="card-name">Field Agent</div>
+      <div class="card-bonus">▲ Earn on tasks</div>
+      <div class="card-cat">Gas & Food</div>
+      <div class="card-desc">Get paid to try new products and complete simple tasks near you.</div>
+      <a href="https://fieldagent.page.link/c4PMXU4jK3wqiL1H7" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="food" data-value="10" data-new="true">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🌍</div>
+      <div class="card-name">Rwazi</div>
+      <div class="card-bonus">▲ Earn for data</div>
+      <div class="card-cat">Gas & Food</div>
+      <div class="card-desc">Get paid to share market data and insights from your area.</div>
+      <a href="https://app.rwazi.com/referral?referrer=referrer_code=4014700" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="gaming" data-value="50" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🎯</div>
+      <div class="card-name">Freecash</div>
+      <div class="card-bonus">▲ Free cash & rewards</div>
+      <div class="card-cat">Gaming & Rewards</div>
+      <div class="card-desc">Complete tasks and surveys to earn real cash and gift cards.</div>
+      <a href="https://freecash.com/r/CallonYaGirl" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="gaming" data-value="25" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">📈</div>
+      <div class="card-name">Kalshi</div>
+      <div class="card-bonus">▲ Bonus on signup</div>
+      <div class="card-cat">Gaming & Rewards</div>
+      <div class="card-desc">Trade on real world events and earn a bonus when you sign up.</div>
+      <a href="https://kalshi.com/sign-up/?referral=4c3ba8d7-2eb5-4b26-9950-20e341a937ab" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="gaming" data-value="100" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">🏈</div>
+      <div class="card-name">DraftKings</div>
+      <div class="card-bonus">▲ Deposit bonus</div>
+      <div class="card-cat">Gaming & Rewards</div>
+      <div class="card-desc">Sign up for DraftKings and get a massive deposit bonus on your first bet.</div>
+      <a href="https://www.draftkings.com/r/clintallen00/US-DK/US-IA" target="_blank">GIT CASH →</a>
+    </div>
+
+    <div class="card" data-cat="tools" data-value="5" data-new="false">
+      <div class="new-badge">NEW</div>
+      <div class="card-icon">📦</div>
+      <div class="card-name">Dropbox</div>
+      <div class="card-bonus">▲ Free bonus storage</div>
+      <div class="card-cat">Tools & Apps</div>
+      <div class="card-desc">Sign up for Dropbox and get extra free storage space instantly.</div>
+      <a href="https://www.dropbox.com/referrals/AABMngL2L07r8xDZpGg1FXyMFXsIEZRieqE?src=global9" target="_blank">GIT CASH →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="container">
   <div class="how">
-    <h2>HOW IT WORKS</h2>
+    <h2>How it Works</h2>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-title">Pick a deal</div>
-        <div class="step-desc">Browse the deals below and pick one that interests you.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-title">Click the link</div>
-        <div class="step-desc">Hit the button and sign up for the app or service.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-title">Get your bonus</div>
-        <div class="step-desc">The bonus hits your account automatically. Real cash, real rewards.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-title">Share it</div>
-        <div class="step-desc">Love a deal? Share this page and help your people get paid too.</div>
-      </div>
+      <div class="step"><div class="step-num">01</div><div class="step-title">Pick a deal</div><div class="step-desc">Browse and find something that interests you.</div></div>
+      <div class="step"><div class="step-num">02</div><div class="step-title">Click the link</div><div class="step-desc">Hit the button and sign up for the app.</div></div>
+      <div class="step"><div class="step-num">03</div><div class="step-title">Get your bonus</div><div class="step-desc">Bonus hits your account automatically.</div></div>
+      <div class="step"><div class="step-num">04</div><div class="step-title">Share it</div><div class="step-desc">Help your people get paid too.</div></div>
     </div>
   </div>
 
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">⛽</span>
-      <span class="cat-title">GAS, FOOD & EVERYDAY SAVINGS</span>
-      <div class="cat-line"></div>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">⛽</div>
-        <div class="card-name">Upside</div>
-        <div class="card-bonus">▲ 15¢/gal + 10% back</div>
-        <div class="card-desc">Get 15¢ extra per gallon on your first gas fill-up and 10% back on first restaurant or grocery purchase. Code: CLINT5482</div>
-        <a href="https://upside.app.link/CLINT5482" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🧾</div>
-        <div class="card-name">Fetch Rewards</div>
-        <div class="card-bonus">▲ Bonus on first receipt</div>
-        <div class="card-desc">Turn receipts into gift cards. Use code ER9H35 to get a bonus on your first receipt scan.</div>
-        <a href="https://referral.fetch.com/vvv3/referralqr?code=ER9H35" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🛒</div>
-        <div class="card-name">Field Agent</div>
-        <div class="card-bonus">▲ Earn on everyday tasks</div>
-        <div class="card-desc">Get paid to try new products and complete simple tasks near you.</div>
-        <a href="https://fieldagent.page.link/c4PMXU4jK3wqiL1H7" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🌍</div>
-        <div class="card-name">Rwazi</div>
-        <div class="card-bonus">▲ Earn for sharing data</div>
-        <div class="card-desc">Get paid to share market data and insights from your area. Easy money!</div>
-        <a href="https://app.rwazi.com/referral?referrer=referrer_code=4014700" target="_blank">GRAB DEAL →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">💸</span>
-      <span class="cat-title">CASH & PAYMENTS</span>
-      <div class="cat-line"></div>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">💸</div>
-        <div class="card-name">Cash App</div>
-        <div class="card-bonus">▲ $5 free cash</div>
-        <div class="card-desc">Get $5 free when you send $5 or more. Use code SCFDD45 when signing up.</div>
-        <a href="https://cash.app/app/SCFDD45" target="_blank">GRAB DEAL →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🏦</span>
-      <span class="cat-title">BANKING & FINANCE</span>
-      <div class="cat-line"></div>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">💚</div>
-        <div class="card-name">Chime</div>
-        <div class="card-bonus">▲ Cash bonus</div>
-        <div class="card-desc">Open a free Chime account and get a cash bonus when you set up direct deposit.</div>
-        <a href="https://www.chime.com/r/clintspruill/" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🏦</div>
-        <div class="card-name">SoFi Checking</div>
-        <div class="card-bonus">▲ Up to $400 bonus</div>
-        <div class="card-desc">Get $25 to $400 when you open an account and set up direct deposit.</div>
-        <a href="https://www.sofi.com/invite/money?gcp=ed851450-f2f5-4b8b-b2c9-8ebb4f5efd76&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <div class="card-name">SoFi Credit</div>
-        <div class="card-bonus">▲ $10 in rewards</div>
-        <div class="card-desc">Earn $10 in rewards just for activating free credit score monitoring.</div>
-        <a href="https://www.sofi.com/invite/relay?gcp=936b8d68-7c86-4596-ac84-05e247b67eb4&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🪙</div>
-        <div class="card-name">SoFi Crypto</div>
-        <div class="card-bonus">▲ $25 free</div>
-        <div class="card-desc">Get $25 when you open an account and make a purchase of $50 or more.</div>
-        <a href="https://www.sofi.com/invite/crypto?gcp=71d3b0a4-2aa5-48a2-b081-8736902f612b&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🏥</div>
-        <div class="card-name">SoFi Loans</div>
-        <div class="card-bonus">▲ $1,000 bonus</div>
-        <div class="card-desc">Special low rates for doctors and dentists. Earn a $1,000 bonus!</div>
-        <a href="https://www.sofi.com/invite/medical-student-loans?gcp=11d486b9-75eb-4179-902d-9ccc7c4c8f11&isAliasGcp=false" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🏧</div>
-        <div class="card-name">Go2Bank</div>
-        <div class="card-bonus">▲ Cash bonus</div>
-        <div class="card-desc">Sign up for Go2Bank and get a cash bonus when you join.</div>
-        <a href="https://share.go2bank.com/sov2h" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">💎</div>
-        <div class="card-name">Gemini Crypto</div>
-        <div class="card-bonus">▲ Free crypto</div>
-        <div class="card-desc">Join Gemini, the federally regulated crypto exchange, and earn a bonus.</div>
-        <a href="https://exchange.gemini.com/register?referral=w7lmzkyte&type=referral" target="_blank">GRAB DEAL →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🎮</span>
-      <span class="cat-title">GAMING & REWARDS</span>
-      <div class="cat-line"></div>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">🎯</div>
-        <div class="card-name">Freecash</div>
-        <div class="card-bonus">▲ Free cash & rewards</div>
-        <div class="card-desc">Complete tasks and surveys to earn real cash and gift cards.</div>
-        <a href="https://freecash.com/r/CallonYaGirl" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <div class="card-name">Kalshi</div>
-        <div class="card-bonus">▲ Bonus on signup</div>
-        <div class="card-desc">Trade on real world events and earn a bonus when you sign up.</div>
-        <a href="https://kalshi.com/sign-up/?referral=4c3ba8d7-2eb5-4b26-9950-20e341a937ab" target="_blank">GRAB DEAL →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🏈</div>
-        <div class="card-name">DraftKings</div>
-        <div class="card-bonus">▲ Deposit bonus</div>
-        <div class="card-desc">Sign up for DraftKings and get a massive deposit bonus on your first bet.</div>
-        <a href="https://www.draftkings.com/r/clintallen00/US-DK/US-IA" target="_blank">GRAB DEAL →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">☁️</span>
-      <span class="cat-title">TOOLS & APPS</span>
-      <div class="cat-line"></div>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">📦</div>
-        <div class="card-name">Dropbox</div>
-        <div class="card-bonus">▲ Free bonus storage</div>
-        <div class="card-desc">Sign up for Dropbox and get extra free storage space instantly.</div>
-        <a href="https://www.dropbox.com/referrals/AABMngL2L07r8xDZpGg1FXyMFXsIEZRieqE?src=global9" target="_blank">GRAB DEAL →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SUGGEST A DEAL -->
+  <!-- SUGGEST -->
   <div class="suggest">
-    <h2>GOT A DEAL?</h2>
+    <h2>Got a Deal?</h2>
     <p class="sub">// Know an app with a referral bonus we should add? Drop it below. We'll check it out, add it to the site, and shout you out. Every quarter we pick one suggester for a special prize drawing.</p>
-    <div class="drawing-badge">🎲 Q2 2026 Drawing — Enter Now</div>
+    <div class="drawing-badge">◆ Q2 2026 Drawing — Enter Now</div>
     <div class="suggest-form">
       <input type="text" id="suggest-name" placeholder="Your name or handle (for the shoutout)" />
-      <input type="text" id="suggest-app" placeholder="App name + your referral link (if you have one)" />
+      <input type="text" id="suggest-app" placeholder="App name + your referral link" />
       <input type="email" id="suggest-email" placeholder="Your email (for the drawing — kept private)" />
-      <textarea id="suggest-note" placeholder="Anything else? Why do you love this app?"></textarea>
+      <textarea id="suggest-note" placeholder="Why do you love this app?"></textarea>
       <button class="suggest-btn" onclick="submitSuggestion()">SUBMIT & ENTER DRAWING →</button>
-      <div class="success-msg" id="success-msg">⚡ Got it! You're entered in the Q2 drawing. We'll check out the app and shout you out if we add it!</div>
-    </div>
-
-    <div class="shoutout-box">
-      <div class="shoutout-title">COMMUNITY SHOUTOUTS</div>
-      <div class="shoutouts">
-        <div class="shoutout-tag">// your name could be here</div>
-        <div class="shoutout-tag">// suggest a deal to get shouted out</div>
-      </div>
+      <div class="success-msg" id="success-msg">◆ Got it! You're entered in the Q2 drawing!</div>
     </div>
   </div>
-
 </div>
 
 <footer>
-  <div class="footer-logo">GETMONEYBACK</div>
-  <div class="footer-text">© 2026 · All deals are real · All bonuses go to you · No BS</div>
+  <div class="footer-logo">GitCash</div>
+  <div class="footer-text">© 2026 GitCash · All deals are real · All bonuses go to you · No BS</div>
 </footer>
 
 <script>
+var currentFilter = 'all';
+
+function filterCards() {
+  var search = document.getElementById('search-input').value.toLowerCase();
+  var cards = document.querySelectorAll('.card');
+  var visible = 0;
+  cards.forEach(function(card) {
+    var cat = card.getAttribute('data-cat');
+    var text = card.innerText.toLowerCase();
+    var matchFilter = currentFilter === 'all' || cat === currentFilter;
+    var matchSearch = text.includes(search);
+    if (matchFilter && matchSearch) {
+      card.style.display = 'block';
+      visible++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+}
+
+function setFilter(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  filterCards();
+}
+
+function sortCards(val) {
+  var grid = document.getElementById('cards-grid');
+  var cards = Array.from(grid.querySelectorAll('.card'));
+  if (val === 'highest') {
+    cards.sort(function(a, b) { return parseInt(b.getAttribute('data-value')) - parseInt(a.getAttribute('data-value')); });
+  } else if (val === 'newest') {
+    cards.sort(function(a, b) { return (b.getAttribute('data-new') === 'true') - (a.getAttribute('data-new') === 'true'); });
+  }
+  cards.forEach(function(card) { grid.appendChild(card); });
+}
+
 function submitSuggestion() {
   var name = document.getElementById('suggest-name').value;
   var app = document.getElementById('suggest-app').value;
   var email = document.getElementById('suggest-email').value;
-  if (!name || !app || !email) {
-    alert('Please fill in your name, app suggestion, and email to enter the drawing!');
-    return;
-  }
+  if (!name || !app || !email) { alert('Please fill in your name, app suggestion, and email!'); return; }
   document.getElementById('success-msg').style.display = 'block';
   document.getElementById('suggest-name').value = '';
   document.getElementById('suggest-app').value = '';
